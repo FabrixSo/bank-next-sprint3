@@ -1,13 +1,14 @@
 import "../app/global.css";
+import Image from 'next/image'
 function Header() {
 	return (
-		
 		<header>
-			
-			<img
-				src="src/assets/logoBanco.png"
+			<h1 className="titulo">Stratton Oakmont</h1>
+			<Image
+				src="/assets/logoBanco.png"
 				alt="Logo banco"
-				width="75rem"
+				width={75}
+				height={75}
 			/>
 		</header>
 	);
