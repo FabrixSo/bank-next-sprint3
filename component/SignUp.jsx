@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
+import Link from 'next/link'
 
 function SignUp({ setUser }) {
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
+	const router = useRouter()
 	const handleSignUp = (e) => {
 		e.preventDefault();
 		const data = new FormData(e.target);
@@ -27,7 +30,7 @@ function SignUp({ setUser }) {
 				);
 				alert("cuenta creada");
 				setUser(userData);
-				navigate("/home");
+				router.push("/home");
 			}
 		} else {
 			alert("Las contraseñas deben ser iguales");

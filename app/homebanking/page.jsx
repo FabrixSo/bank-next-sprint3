@@ -1,4 +1,4 @@
-import './global.css'
+// import './global.css'
 import HomeBanking from '../component/HomeBanking'
 
 export default function HomeBankingPage() {

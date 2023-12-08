@@ -1,9 +1,7 @@
 import Header from "../component/Header";
 import Footer from "../component/Footer";
-import InicioPage from "./page";
-import "./global.css"
-import Link from "next/link";
-import Inicio from "@/component/Inicio";
+import "./global.css";
+
 
 
 export const metadata = {

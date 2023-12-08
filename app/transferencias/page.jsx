@@ -1,4 +1,4 @@
-import './global.css'
+// import './global.css'
 import Transferencias from '../component/homeBankingWindows/Transferencias'
 
 export default function TransferenciasPage() {

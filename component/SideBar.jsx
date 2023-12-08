@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 import "../app/global.css";
 import logo from "../public/assets/logo.png";
 import punto from "../public/assets/punto.png";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import MenuItem from "./MenuItem";
+import { useRouter } from "next/navigation";
 
 const Sidebar = ({ setUser, user, page, setPage }) => {
 	const [collapsed, setCollapsed] = useState(true);
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
+    const router = useRouter()
+
 	const switchView = (view) => {
 		setPage(view);
 		toggleMenu();
@@ -21,7 +24,8 @@ const Sidebar = ({ setUser, user, page, setPage }) => {
 	}
 	useEffect(() => {
 		if (!user || Object.keys(user).length === 0) {
-			navigate("/");
+			// navigate("/");
+			router.push('/')
 		}
 	}, [user, setUser]);
 
