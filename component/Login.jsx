@@ -1,14 +1,18 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 function Login({ setUser }) {
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
+
+	const router = useRouter()
+
 	const handleLogin = (e) => {
 		e.preventDefault();
 		const data = new FormData(e.target);
 		const userInfo = window.sessionStorage.getItem(data.get("email"));
 		if (userInfo !== null) {
 			setUser(JSON.parse(userInfo));
-			navigate("/home");
+			router.push("/home");
 		} else {
 			alert("User not found");
 		}
