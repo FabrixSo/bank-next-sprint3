@@ -21,14 +21,6 @@ function Footer() {
           <li><a href="#">Política de cookies</a></li>
         </ul>
       </div>
-      <div className="col-md-4">
-        <h3>Redes sociales</h3>
-        <ul>
-          <li><a href="https://www.facebook.com">Facebook</a></li>
-          <li><a href="https://twitter.com/home">Twitter</a></li>
-          <li><a href="https://www.instagram.com">Instagram</a></li>
-        </ul>
-      </div>
     </div>
   </div>
 </footer>
