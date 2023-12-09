@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "../app/global.css";
-import logo from "../public/assets/logo.png";
-import punto from "../public/assets/punto.png";
 // import { useNavigate } from "react-router-dom";
 import MenuItem from "./MenuItem";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
-const Sidebar = ({ setUser, user, page, setPage }) => {
+const Sidebar = ({ user, page, setPage }) => {
+
+	const logo = "/assets/logo.png";
+	const punto = "/assets/punto.png";
+
 	const [collapsed, setCollapsed] = useState(true);
 	// const navigate = useNavigate();
     const router = useRouter()
@@ -20,14 +23,14 @@ const Sidebar = ({ setUser, user, page, setPage }) => {
 	};
 
 	function handleLogOut() {
-		setUser({});
+		user.setUser;
+		router.push('/')
 	}
 	useEffect(() => {
-		if (!user || Object.keys(user).length === 0) {
-			// navigate("/");
+		if (user.getUser === null ) {
 			router.push('/')
 		}
-	}, [user, setUser]);
+	}, []);
 
 	return (
 		<div
@@ -46,7 +49,12 @@ const Sidebar = ({ setUser, user, page, setPage }) => {
 			{/* Perfil */}
 			<div id="profile">
 				<div id="photo">
-					<img src={logo} alt="Foto de perfil" />
+					<Image 
+					src={logo} 
+					alt="Foto de perfil"
+					width={100}
+					height={100}
+					/>
 				</div>
 				<div id="sideMenuName">
 					{user

@@ -1,6 +1,19 @@
-function Prestamos({ user, setUser }) {
+
+function Prestamos() {
+		const user = {
+			nombre: "Ejemplo",
+		};
+		// Verificar si el objeto es extensible
+	if (!Object.isExtensible(user)) {
+		// Hacer el objeto extensible si no lo es
+		Object.preventExtensions(user);
+	}
+	
+	// Ahora puedes agregar la propiedad balance sin generar el error
+	user.balance = 1000;
 	function handleSubmit(e) {
 		e.preventDefault();
+		
 		const { monto, plazo } = e.target;
 		if (
 			confirm(

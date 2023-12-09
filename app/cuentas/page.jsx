@@ -1,5 +1,6 @@
-import Cuentas from '../component/homeBankingWindows/Cuentas'
+// "use client"
+// import Cuentas from '../component/homeBankingWindows/Cuentas'
 
-export default function CuentasPage() {
-    return <Cuentas></Cuentas>
-}
+// export default function CuentasPage() {
+//     return <Cuentas></Cuentas>
+// }

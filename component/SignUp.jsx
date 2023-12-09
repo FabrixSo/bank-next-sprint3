@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useRouter } from "next/navigation";
-import Link from 'next/link'
+// import * as Sentry from "@sentry/nextjs";
+import * as user from "./User"
 
-function SignUp({ setUser }) {
-	// const navigate = useNavigate();
+function SignUp() {
 	const router = useRouter()
 	const handleSignUp = (e) => {
 		e.preventDefault();
@@ -28,9 +28,9 @@ function SignUp({ setUser }) {
 					userData.email,
 					JSON.stringify(userData)
 				);
-				alert("cuenta creada");
-				setUser(userData);
-				router.push("/home");
+				user.setUser(userData);
+				alert(`Cuenta creada, Bienvenido ${user.getUser().name}`);
+				router.push("/homebanking");
 			}
 		} else {
 			alert("Las contraseñas deben ser iguales");
