@@ -1,5 +1,6 @@
 import "../app/global.css";
 import Image from 'next/image'
+
 function Header() {
 	return (
 		<header>

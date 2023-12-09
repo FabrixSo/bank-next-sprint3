@@ -5,7 +5,7 @@ import "./global.css";
 
 
 export const metadata = {
-  title: 'Bank-next',
+  title: 'Stratton Oakmont Bank-next',
   description: 'Sprint-3',
 }
 

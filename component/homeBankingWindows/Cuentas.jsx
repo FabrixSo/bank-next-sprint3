@@ -1,13 +1,17 @@
-import "../../app/global.css";
+import Image from "next/image";
+
 function Cuentas({ user }) {
 	return (
 		<div className="cuentaPage">
 			<h1>Tu Cuenta</h1>
 			{user ? (
 				<div className="cuentaImgDiv">
-					<img
-						className="cuentaImg"
-						src="src/assets/logo.png"
+					<Image
+					className="cuentaImg"
+					src="/assets/logo.png"
+					alt="Logo banco"
+					width={100}
+					height={100}
 					/>
 				</div>
 			) : (

@@ -1,24 +1,28 @@
 import Sidebar from "./SideBar";
+// import * as Sentry from "@sentry/nextjs";
 import { useEffect, useState } from "react";
 import Cuentas from "./homeBankingWindows/Cuentas";
 import Pagos from "./homeBankingWindows/Pagos";
 import Transferencias from "./homeBankingWindows/Transferencias";
 import Prestamos from "./homeBankingWindows/Prestamos";
 import Convertidor from "./homeBankingWindows/Convertidor";
+import { useRouter } from "next/navigation";
+import * as user from "./User"
 
-function HomeBanking({ user, setUser }) {
+function HomeBanking() {
+	const router = useRouter()
 	const [page, setPage] = useState("cuentas");
 	const [show, setShow] = useState();
 	const getElement = () => {
 		switch (page) {
 			case "cuentas":
-				return <Cuentas user={user} />;
+				return <Cuentas user={user.getUser()} />;
 			case "pagos":
-				return <Pagos user={user} />;
+				return <Pagos user={user.getUser()} />;
 			case "transferencias":
-				return <Transferencias user={user} />;
+				return <Transferencias user={user.getUser()} />;
 			case "prestamos":
-				return <Prestamos user={user} setUser={setUser} />;
+				return <Prestamos user={user.getUser()} />;
 			case "convertidor":
 				return <Convertidor />;
 
@@ -34,8 +38,7 @@ function HomeBanking({ user, setUser }) {
 			<div className="homeBankingDiv">{show ? show : ""}</div>
 
 			<Sidebar
-				setUser={setUser}
-				user={user}
+				user={user.getUser()}
 				page={page}
 				setPage={setPage}
 			/>

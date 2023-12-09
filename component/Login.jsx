@@ -1,5 +1,6 @@
 // import { useNavigate } from "react-router-dom";
 import { useRouter } from "next/navigation";
+import * as Sentry from "@sentry/nextjs";
 
 function Login({ setUser }) {
 	// const navigate = useNavigate();
@@ -11,8 +12,9 @@ function Login({ setUser }) {
 		const data = new FormData(e.target);
 		const userInfo = window.sessionStorage.getItem(data.get("email"));
 		if (userInfo !== null) {
-			setUser(JSON.parse(userInfo));
-			router.push("/home");
+			
+			Sentry.setUser(JSON.parse(userInfo));
+			router.push("/homebanking");
 		} else {
 			alert("User not found");
 		}

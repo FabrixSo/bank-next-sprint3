@@ -1,9 +1,9 @@
 import "../app/global.css";
 function Footer() {
 	return <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
+  <div className="container">
+    <div className="row">
+      <div className="col-md-4">
         <h3>Acerca de</h3>
         <ul>
           <li><a href="#">Nuestra historia</a></li>
@@ -11,7 +11,7 @@ function Footer() {
           <li><a href="#">Nuestros clientes</a></li>
         </ul>
       </div>
-      <div class="col-md-4">
+      <div className="col-md-4">
         <h3>Términos y condiciones</h3>
         <ul>
           <li><a href="#">Política de privacidad</a></li>
@@ -21,7 +21,7 @@ function Footer() {
           <li><a href="#">Política de cookies</a></li>
         </ul>
       </div>
-      <div class="col-md-4">
+      <div className="col-md-4">
         <h3>Redes sociales</h3>
         <ul>
           <li><a href="https://www.facebook.com">Facebook</a></li>

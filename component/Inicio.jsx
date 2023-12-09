@@ -1,11 +1,6 @@
 "use client"
-// import { Link, BrowserRouter } from "react-router-dom";
 import { useRouter } from "next/navigation";
 import Image from 'next/image'
-
-
-
-
 
 function Inicio() {
 	const router = useRouter()
